@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/adbert-quiz/static/js/main.e04afb44.js",
+    "static/js/787.0bf7a117.chunk.js": "/adbert-quiz/static/js/787.0bf7a117.chunk.js",
+    "index.html": "/adbert-quiz/index.html",
+    "main.e04afb44.js.map": "/adbert-quiz/static/js/main.e04afb44.js.map",
+    "787.0bf7a117.chunk.js.map": "/adbert-quiz/static/js/787.0bf7a117.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e04afb44.js"
+  ]
+}

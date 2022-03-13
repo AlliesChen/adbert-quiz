@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
 
-function App() {
+export default function App() {
+  const [count, setCount] = React.useState(0);
+  const [disableBtn, setDisableBtn] = React.useState("DISABLE");
+  const [isDisable, setIsDisable] = React.useState(false);
+  function add() {
+    setCount((prevCount) => prevCount + 1);
+  }
+  function clear() {
+    setCount(0);
+  }
+  function triggerDisable() {
+    setIsDisable((prevIsDisable) => !prevIsDisable);
+    setDisableBtn("ABLE");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ButtonGroup orientation="vertical">
+      <Button variant="outlined" disabled={isDisable} onClick={add}>
+        CLICK:{count}
+      </Button>
+      <Button variant="outlined" onClick={clear}>
+        CLEAR
+      </Button>
+      <Button variant="outlined" onClick={triggerDisable}>
+        {disableBtn}
+      </Button>
+    </ButtonGroup>
   );
 }
-
-export default App;
